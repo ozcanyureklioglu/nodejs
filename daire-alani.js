@@ -6,5 +6,23 @@ function hesapla(yaricap) {
     
     
 }
+function showPrimeNumbers(lownumber, highNumber) {
+    for (let i =lownumber; i <= highNumber; i++) {
+        let isPrime = true;
+        for (let j = 2; j <= i; j ++) {
+            if( i % j ===0 && j !==i) {
+                isPrime = false
+            }
+        }
 
-hesapla(arguments[0] *1);
+        if(isPrime) {
+            console.log(i);
+        }
+    }
+}
+
+//hesapla(arguments[0] *1);
+
+module.exports = {
+    hesapla:hesapla
+}
